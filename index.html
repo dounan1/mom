@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Mother’s Day Tribute to My Hero</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      color: #333;
+      background: linear-gradient(to bottom, #f8e1e9, #fff);
+      overflow-x: hidden;
+    }
+    section {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+    }
+    .cartoon-image {
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #music-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .memory-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .memory-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .memory-card h3, .memory-card p {
+      position: relative;
+      z-index: 2;
+      padding: 0 1rem;
+    }
+    .memory-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .memory-card p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Music Toggle -->
+  <button id="music-toggle" class="bg-pink-300 text-white px-4 py-2 rounded-full hover:bg-pink-400">
+    Pause Music
+  </button>
+
+  <!-- Home Section -->
+  <section id="home" class="flex flex-col items-center justify-center text-center bg-pink-50">
+    <lottie-player class="max-w-[300px] mx-auto" src="https://assets.lottiefiles.com/packages/lf20_8lX6kJ.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <h1 class="text-5xl font-bold text-pink-600 mb-4 animate__fadeIn">Happy Mother’s Day, Mom!</h1>
+    <p class="text-xl text-gray-700 max-w-2xl animate__fadeIn" data-delay="0.5">
+      Today, I celebrate you—my hero, my guide, my everything. This website is a tribute to your love and sacrifices.
+    </p>
+  </section>
+
+  <!-- Her Story Section -->
+  <section id="story" class="bg-white">
+    <h2 class="text-4xl font-bold text-center text-pink-600 mb-8">Your Journey, Mom</h2>
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1618005182380-1f8a6e4d0653?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a young girl in Wuxi" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">1950s Wuxi: Childhood with Grandparents</h3>
+          <p class="text-gray-600">
+            In Wuxi, you spent joyful days with your grandparents, learning resilience and love amidst a changing China.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1623146091359-7b2b4328b6c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of Shanghai during Cultural Revolution" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">Cultural Revolution in Shanghai</h3>
+          <p class="text-gray-600">
+            Through the turmoil of the Cultural Revolution, you faced chaos with courage, holding family close in Shanghai.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of Yunnan during Great Leap Forward" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">Great Leap Forward in Yunnan</h3>
+          <p class="text-gray-600">
+            In Yunnan, you worked tirelessly during the Great Leap Forward, adapting to hardship with unwavering strength.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1618005182380-1f8a6e4d0653?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a mother with baby in Shanghai" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">Back to Shanghai: My Birth</h3>
+          <p class="text-gray-600">
+            Returning to Shanghai, you brought me into the world, pouring your heart into giving me a future.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a family in Canada" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">Immigration to Canada</h3>
+          <p class="text-gray-600">
+            As an immigrant in Canada, you embraced new challenges, building a foundation for our better life.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=c/TRANSFORMED crop&w=200&q=80" alt="Cartoon of a family in the US" class="cartoon-image">
+        </div>
+        <div class="w-2/3 pl-8">
+          <h3 class="text-2xl font-semibold text-gray-800">Settling in the US</h3>
+          <p class="text-gray-600">
+            In the US, you worked relentlessly, ensuring I never lacked for anything, paving my path to success.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tribute Section -->
+  <section id="tribute" class="bg-pink-100 text-center">
+    <h2 class="text-4xl font-bold text-pink-600 mb-8">For You, My Dearest Mom</h2>
+    <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+      Mom, your sacrifices are the heartbeat of my success. From the struggles of China to the dreams you built in Canada and the US, you gave everything for me. Your love carried me to Cambridge and beyond, as a tech specialist. You are my hero, and today, I honor you with all my heart.
+    </p>
+    <lottie-player class="max-w-[300px] mx-auto" src="https://assets.lottiefiles.com/packages/lf20_8lX6kJ.json" background="transparent" speed="1" loop autoplay></lottie-player>
+  </section>
+
+  <!-- Memories Section -->
+  <section id="memories" class="bg-white">
+    <h2 class="text-4xl font-bold text-center text-pink-600 mb-8">Our Memories</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYex-UBPEVSjHbkf0fz5H24j_DiAjes7SnKXZdF8R13TmkaKPhJk5xkZ46SJPsEGxIOA&usqp=CAU');">
+        <h3 class="text-xl font-semibold">Your Late Nights</h3>
+        <p>I remember you working late to provide for me, never complaining, always smiling.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd3dI557RffhqXP7XucY8cROrkfR--PNSJmw&s');">
+        <h3 class="text-xl font-semibold">Our New Home </h3>
+        <p>In Canada, you made our small apartment a warm home filled with love.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpabh0pjim2nz4euRCHuF-gq97vLC13eeJA&s');">
+        <h3 class="text-xl font-semibold">My Graduation</h3>
+        <p>Your proud smile at my Cambridge graduation was my greatest reward.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <h3 class="text-xl font-semibold">National Parks Adventures</h3>
+        <p>We explored the breathtaking national parks together, from Yosemite to Yellowstone, creating unforgettable memories.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1200,h_630,g_auto/dpr_auto/f_auto/q_auto:eco/v1/christmas-gettyimages-184652817?_a=BAVAZGDX0');">
+        <h3 class="text-xl font-semibold">Christmas and New Years</h3>
+        <p>Every Christmas and New Year’s, you made our celebrations magical with love and traditions.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://obj.shine.cn/files/2023/12/15/d8fc4d53-a3eb-456f-b315-5571553699d2_0.jpg');">
+        <h3 class="text-xl font-semibold">Shanghai Park Lights</h3>
+        <p>As a child in Shanghai, you took me to parks to see dazzling lights, sparking wonder in my young heart.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTydAnfTg1YIDkUyWJFV-PMtsXabU18XO35HA&s');">
+        <h3 class="text-xl font-semibold">First KFC at The Bund</h3>
+        <p>I’ll never forget our first meal at KFC when it opened on The Bund, a special treat with you.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmgeDNy7t-sE0t9MR46-_y9F8gbSoAq65tg&s');">
+        <h3 class="text-xl font-semibold">Museum Adventures</h3>
+        <p>You nurtured my curiosity by taking me to museums, fueling my love for learning as I grew.</p>
+      </div>
+      <div class="memory-card p-6 rounded-lg shadow-lg hover:scale-105 transition-transform" style="background-image: url('https://i.ytimg.com/vi/7TbroLXEnZA/maxresdefault.jpg');">
+        <h3 class="text-xl font-semibold">Marching Band Support</h3>
+        <p>You drove me to marching band practice and cheered at my performances, always my biggest fan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter Section -->
+  <section id="letter" class="bg-pink-50 text-center">
+    <h2 class="text-4xl font-bold text-pink-600 mb-8">A Letter to You, Mom</h2>
+    <div class="max-w-3xl mx-auto text-left text-gray-700 text-lg space-y-4">
+      <p class="letter-line">
+        Dearest Mom,
+      </p>
+      <p class="letter-line">
+        Words can’t capture the depth of my gratitude. From Wuxi’s quiet moments with your grandparents to the chaos of Shanghai’s Cultural Revolution, you faced every challenge with grace. In Yunnan, you toiled through the Great Leap Forward, yet your spirit never broke.
+      </p>
+      <p class="letter-line">
+        When you brought me into the world in Shanghai, you vowed to give me a better life. You left everything familiar to start anew in Canada, then the US, working tirelessly so I could dream big. Because of you, I walked the halls of Cambridge and became who I am today.
+      </p>
+      <p class="letter-line">
+        Your sacrifices are my foundation. Your love is my strength. This Mother’s Day, I celebrate you—not just as my mom, but as the extraordinary woman who changed my world.
+      </p>
+      <p class="letter-line">
+        With all my love,
+        Your Son Always, Dounan
+      </p>
+    </div>
+  </section>
+
+  <!-- Audio -->
+  <audio id="background-music" loop autoplay>
+    <source src="https://www.lilesnet.com/mother/sound/Wings-Of-Love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Home Section Animations
+    gsap.from('#home h1', { opacity: 0, y: 50, duration: 1 });
+    gsap.from('#home p', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+
+    // Timeline Item Animations
+    document.querySelectorAll('.timeline-item').forEach((item, index) => {
+      gsap.from(item.querySelector('.cartoon-image'), {
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 80%',
+        },
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+      });
+      gsap.from(item.querySelector('div.w-2/3'), {
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 80%',
+        },
+        opacity: 0,
+        x: index % 2 === 0 ? -100 : 100,
+        duration: 1,
+        delay: 0.3,
+      });
+    });
+
+    // Memory Card Animations
+    gsap.from('.memory-card', {
+      scrollTrigger: {
+        trigger: '#memories',
+        start: 'top 80%',
+      },
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      duration: 0.8,
+    });
+
+    // Letter Line Animations
+    gsap.from('.letter-line', {
+      scrollTrigger: {
+        trigger: '#letter',
+        start: 'top 80%',
+      },
+      opacity: 0,
+      x: -50,
+      stagger: 0.3,
+      duration: 1,
+    });
+
+    // Music Control
+    const audio = document.getElementById('background-music');
+    const toggleButton = document.getElementById('music-toggle');
+    if (audio.paused) {
+      audio.play().catch((error) => {
+        console.log('Autoplay prevented:', error);
+        toggleButton.textContent = 'Play Music';
+      });
+    }
+    toggleButton.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().catch((error) => console.log('Playback error:', error));
+        toggleButton.textContent = 'Pause Music';
+      } else {
+        audio.pause();
+        toggleButton.textContent = 'Play Music';
+      }
+    });
+  </script>
+</body>
+</html>
