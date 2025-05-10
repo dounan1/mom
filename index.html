@@ -7,6 +7,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+  <style>
+    /* Your existing styles */
+  </style>
+</head>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -70,12 +79,11 @@
 <body>
   <!-- Music Toggle -->
   <button id="music-toggle" class="bg-pink-300 text-white px-4 py-2 rounded-full hover:bg-pink-400">
-    Pause Music
+    Start Music
   </button>
 
   <!-- Home Section -->
   <section id="home" class="flex flex-col items-center justify-center text-center bg-pink-50">
-    <lottie-player class="max-w-[300px] mx-auto" src="https://assets.lottiefiles.com/packages/lf20_8lX6kJ.json" background="transparent" speed="1" loop autoplay></lottie-player>
     <h1 class="text-5xl font-bold text-pink-600 mb-4 animate__fadeIn">Happy Mother’s Day, Mom!</h1>
     <p class="text-xl text-gray-700 max-w-2xl animate__fadeIn" data-delay="0.5">
       Today, I celebrate you—my hero, my guide, my everything. This website is a tribute to your love and sacrifices.
@@ -88,7 +96,7 @@
     <div class="max-w-4xl mx-auto space-y-12">
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1618005182380-1f8a6e4d0653?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a young girl in Wuxi" class="cartoon-image">
+          <img src="1.png" alt="Cartoon of a young girl in Wuxi" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">1950s Wuxi: Childhood with Grandparents</h3>
@@ -99,18 +107,17 @@
       </div>
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1623146091359-7b2b4328b6c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of Shanghai during Cultural Revolution" class="cartoon-image">
+          <img src="2.png" alt="Cartoon of Shanghai during Cultural Revolution" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Cultural Revolution in Shanghai</h3>
           <p class="text-gray-600">
-            Through the turmoil of the Cultural Revolution, you faced chaos with courage, holding family close in Shanghai.
-          </p>
+            Through the turmoil of the Cultural Revolution, you faced chaos with courage, with your mother and father and 2 younger brothers close in Shanghai. </p>
         </div>
       </div>
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of Yunnan during Great Leap Forward" class="cartoon-image">
+          <img src="3.png" alt="Cartoon of Yunnan during Great Leap Forward" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Great Leap Forward in Yunnan</h3>
@@ -121,7 +128,7 @@
       </div>
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1618005182380-1f8a6e4d0653?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a mother with baby in Shanghai" class="cartoon-image">
+          <img src="4.png" alt="Cartoon of a mother with baby in Shanghai" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Back to Shanghai: My Birth</h3>
@@ -132,7 +139,7 @@
       </div>
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cartoon of a family in Canada" class="cartoon-image">
+          <img src="5.png" alt="Cartoon of a family in Canada" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Immigration to Canada</h3>
@@ -143,7 +150,7 @@
       </div>
       <div class="timeline-item flex items-center">
         <div class="w-1/3">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=c/TRANSFORMED crop&w=200&q=80" alt="Cartoon of a family in the US" class="cartoon-image">
+          <img src="6.png" alt="Cartoon of a family in the US" class="cartoon-image">
         </div>
         <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Settling in the US</h3>
@@ -159,9 +166,24 @@
   <section id="tribute" class="bg-pink-100 text-center">
     <h2 class="text-4xl font-bold text-pink-600 mb-8">For You, My Dearest Mom</h2>
     <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-      Mom, your sacrifices are the heartbeat of my success. From the struggles of China to the dreams you built in Canada and the US, you gave everything for me. Your love carried me to Cambridge and beyond, as a tech specialist. You are my hero, and today, I honor you with all my heart.
+      Mom, your sacrifices are the heartbeat of my success. From the struggles of China to the dreams you built in Canada and the US, you gave everything for me. Your love carried me to everywhere and beyond. You are my hero, and today, I honor you with all my heart.
     </p>
-    <lottie-player class="max-w-[300px] mx-auto" src="https://assets.lottiefiles.com/packages/lf20_8lX6kJ.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <div class="flex justify-center mt-8">
+     <div class="relative rounded-full overflow-hidden shadow-lg border-4 border-pink-300">
+       <img src="mom.png" alt="" class="w-64 h-64 object-cover">
+       <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-700 opacity-0 hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
+         <p class="text-white text-xl font-semibold">For you my dearest mother</p>
+       </div>
+     </div>
+    </div>
+    <dotlottie-player
+      src="https://lottie.host/77438cc4-9c5b-414d-b504-5ea65af81caf/8WqAGW3GAg.lottie"
+      background="transparent"
+      speed="1"
+      class="max-w-[300px] mx-auto"
+      loop
+      autoplay
+    ></dotlottie-player>
   </section>
 
   <!-- Memories Section -->
@@ -224,8 +246,14 @@
         Your sacrifices are my foundation. Your love is my strength. This Mother’s Day, I celebrate you—not just as my mom, but as the extraordinary woman who changed my world.
       </p>
       <p class="letter-line">
-        With all my love,
-        Your Son Always, Dounan
+        With all my love.
+      </p>
+      <p class="letter-line">
+        Your Son Always,
+      </p>
+      <p class="letter-line">
+
+        Dounan
       </p>
     </div>
   </section>
@@ -255,16 +283,22 @@
         scale: 0.8,
         duration: 1,
       });
-      gsap.from(item.querySelector('div.w-2/3'), {
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 80%',
-        },
-        opacity: 0,
-        x: index % 2 === 0 ? -100 : 100,
-        duration: 1,
-        delay: 0.3,
-      });
+      // **FIXED SELECTOR HERE**
+      const textContentDiv = item.querySelector('div.w-2\\/3'); // Escaped the '/'
+      if (textContentDiv) {
+        gsap.from(textContentDiv, {
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 80%',
+          },
+          opacity: 0,
+          x: index % 2 === 0 ? -100 : 100,
+          duration: 1,
+          delay: 0.3,
+        });
+      } else {
+        console.warn("Could not find 'div.w-2/3' in timeline item:", item);
+      }
     });
 
     // Memory Card Animations
@@ -294,19 +328,23 @@
     // Music Control
     const audio = document.getElementById('background-music');
     const toggleButton = document.getElementById('music-toggle');
-    if (audio.paused) {
-      audio.play().catch((error) => {
-        console.log('Autoplay prevented:', error);
-        toggleButton.textContent = 'Play Music';
-      });
-    }
+
     toggleButton.addEventListener('click', () => {
       if (audio.paused) {
-        audio.play().catch((error) => console.log('Playback error:', error));
-        toggleButton.textContent = 'Pause Music';
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(_ => {
+            // Autoplay started!
+            toggleButton.textContent = 'Pause Music';
+          }).catch(error => {
+            // Autoplay was prevented.
+            console.error('Music play was prevented:', error);
+            toggleButton.textContent = 'Start Music'; // Ensure button text is correct
+          });
+        }
       } else {
         audio.pause();
-        toggleButton.textContent = 'Play Music';
+        toggleButton.textContent = 'Start Music';
       }
     });
   </script>
