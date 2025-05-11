@@ -11,7 +11,7 @@
   <script
   src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
   type="module"
-  ></script>
+></script>
   <style>
     /* Your existing styles */
   </style>
@@ -28,7 +28,7 @@
       padding: 4rem 2rem;
     }
     .cartoon-image {
-      max-width: 200px; /* Ensures image isn't too large on mobile */
+      max-width: 200px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -77,10 +77,12 @@
   </style>
 </head>
 <body>
+  <!-- Music Toggle -->
   <button id="music-toggle" class="bg-pink-300 text-white px-4 py-2 rounded-full hover:bg-pink-400">
     Start Music
   </button>
 
+  <!-- Home Section -->
   <section id="home" class="flex flex-col items-center justify-center text-center bg-pink-50">
     <h1 class="text-5xl font-bold text-pink-600 mb-4 animate__fadeIn">Happy Mother’s Day, Mom!</h1>
     <p class="text-xl text-gray-700 max-w-2xl animate__fadeIn" data-delay="0.5">
@@ -88,68 +90,69 @@
     </p>
   </section>
 
+  <!-- Her Story Section -->
   <section id="story" class="bg-white">
     <h2 class="text-4xl font-bold text-center text-pink-600 mb-8">Your Journey, Mom</h2>
     <div class="max-w-4xl mx-auto space-y-12">
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="1.png" alt="Cartoon of a young girl in Wuxi" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">1950s Wuxi: Childhood with Grandparents</h3>
           <p class="text-gray-600">
             In Wuxi, you spent joyful days with your grandparents, learning resilience and love amidst a changing China.
           </p>
         </div>
       </div>
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="2.png" alt="Cartoon of Shanghai during Cultural Revolution" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Cultural Revolution in Shanghai</h3>
           <p class="text-gray-600">
             Through the turmoil of the Cultural Revolution, you faced chaos with courage, with your mother and father and 2 younger brothers close in Shanghai. </p>
         </div>
       </div>
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="3.png" alt="Cartoon of Yunnan during Great Leap Forward" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Great Leap Forward in Yunnan</h3>
           <p class="text-gray-600">
             In Yunnan, you worked tirelessly during the Great Leap Forward, adapting to hardship with unwavering strength.
           </p>
         </div>
       </div>
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="4.png" alt="Cartoon of a mother with baby in Shanghai" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Back to Shanghai: My Birth</h3>
           <p class="text-gray-600">
             Returning to Shanghai, you brought me into the world, pouring your heart into giving me a future.
           </p>
         </div>
       </div>
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="5.png" alt="Cartoon of a family in Canada" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Immigration to Canada</h3>
           <p class="text-gray-600">
             As an immigrant in Canada, you embraced new challenges, building a foundation for our better life.
           </p>
         </div>
       </div>
-      <div class="timeline-item flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
-        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+      <div class="timeline-item flex items-center">
+        <div class="w-1/3">
           <img src="6.png" alt="Cartoon of a family in the US" class="cartoon-image">
         </div>
-        <div class="w-full md:w-2/3 text-center md:text-left timeline-text-content">
+        <div class="w-2/3 pl-8">
           <h3 class="text-2xl font-semibold text-gray-800">Settling in the US</h3>
           <p class="text-gray-600">
             In the US, you worked relentlessly, ensuring I never lacked for anything, paving my path to success.
@@ -159,6 +162,7 @@
     </div>
   </section>
 
+  <!-- Tribute Section -->
   <section id="tribute" class="bg-pink-100 text-center">
     <h2 class="text-4xl font-bold text-pink-600 mb-8">For You, My Dearest Mom</h2>
     <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
@@ -182,6 +186,7 @@
     ></dotlottie-player>
   </section>
 
+  <!-- Memories Section -->
   <section id="memories" class="bg-white">
     <h2 class="text-4xl font-bold text-center text-pink-600 mb-8">Our Memories</h2>
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -224,6 +229,7 @@
     </div>
   </section>
 
+  <!-- Letter Section -->
   <section id="letter" class="bg-pink-50 text-center">
     <h2 class="text-4xl font-bold text-pink-600 mb-8">A Letter to You, Mom</h2>
     <div class="max-w-3xl mx-auto text-left text-gray-700 text-lg space-y-4">
@@ -252,6 +258,7 @@
     </div>
   </section>
 
+  <!-- Audio -->
   <audio id="background-music" loop autoplay>
     <source src="https://www.lilesnet.com/mother/sound/Wings-Of-Love.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -276,8 +283,8 @@
         scale: 0.8,
         duration: 1,
       });
-      // **UPDATED SELECTOR HERE**
-      const textContentDiv = item.querySelector('.timeline-text-content'); // Use the new stable class
+      // **FIXED SELECTOR HERE**
+      const textContentDiv = item.querySelector('div.w-2\\/3'); // Escaped the '/'
       if (textContentDiv) {
         gsap.from(textContentDiv, {
           scrollTrigger: {
@@ -285,15 +292,12 @@
             start: 'top 80%',
           },
           opacity: 0,
-          x: index % 2 === 0 ? -100 : 100, // This will still alternate based on original layout intent.
-                                           // On mobile, all text will come from the center (x:0 effect due to text-align:center initially)
-                                           // then animate from -100 or 100.
-                                           // For a more centered mobile animation, you could set x:0 if window.innerWidth < 768
+          x: index % 2 === 0 ? -100 : 100,
           duration: 1,
           delay: 0.3,
         });
       } else {
-        console.warn("Could not find '.timeline-text-content' in timeline item:", item);
+        console.warn("Could not find 'div.w-2/3' in timeline item:", item);
       }
     });
 
